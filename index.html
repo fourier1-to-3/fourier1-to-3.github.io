@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- bulma css template -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <!-- model viewer -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+  <title>
+    Fourier123
+  </title>
+  <link rel="icon" href="Fourier123.ico">
+</head>
+<body>
+  <section class="section">
+
+  <div class="container has-text-centered">
+    <!-- paper title -->
+    <p class="title is-3"> Fourier123: One Image to High-Quality 3D Object Generation with <br>Hybrid Fourier Score Distillation </p>
+    <!-- publication -->
+    <p class="subtitle is-4"> NeurIPS 2024 submission</p>
+    <!-- authors -->
+    <p class="title is-5 mt-2">
+      <a href="https://ysz2022.github.io/" target="_blank">Shuzhou Yang</a><sup>1,2</sup>,
+      <a href="https://fourier1-to-3.github.io/" target="_blank">Yu Wang</a><sup>1</sup>,
+      <a href="https://fourier1-to-3.github.io/" target="_blank">Haijie Li</a><sup>1</sup>,
+      <a href="https://fourier1-to-3.github.io/" target="_blank">Jiarui Meng</a><sup>1</sup>,
+      <a href="https://fourier1-to-3.github.io/" target="_blank">Xiandong Meng</a><sup>2</sup>,
+      <a href="https://jianzhang.tech/" target="_blank">Jian Zhang</a><sup>1</sup>
+    </p>
+    <!-- affiliations -->
+    <p class="subtitle is-5">
+      <sup>1</sup> Peking University &nbsp;
+      <sup>2</sup> PengCheng Laboratory &nbsp;
+    </p>
+   
+  </div>
+
+  <!-- main container -->
+  <div class="container is-max-desktop has-text-centered">
+
+    <!-- abstract -->
+    <p class="title is-3 mt-5 has-text-centered"> Abstract </p>
+    <p class="content is-size-6 has-text-left">
+      Single image-to-3D generation is crucial for the creation of controllable 3D assets.
+      As it is an underconstrained problem, we capitalize on the geometric priors from novel view (3D) generation diffusion model, and appearance priors from image (2D) generation methods to guide optimization.
+      We observe that due to the gap between the training data of 2D and 3D diffusion models, their generated views exhibit significant appearance distinguish.
+      For example, 2D models tend to produce more details, while 3D models achieve consistent but over-smooth results across views.
+      Therefore, we optimize a set of 3D Gaussians by using 3D priors in the spatial domain to ensure geometric consistency, while exploiting 2D priors in the frequency domain by Fourier transform for higher visual quality.
+      This 2D-3D <b>hy</b>brid <b>F</b>ourier <b>S</b>core <b>D</b>istillation objective function is dubbed as <b>hy-FSD</b>, which can be applied to existing 3D generation baselines and bring noteworthy performance gains.
+      Based on it, we further develop an image-to-3D generation pipeline to create high-quality 3D objects within one minute, called <b>Fourier123</b>.
+      Through extensive experiments, Fourier123 demonstrates efficient generation capability with fast training speed and visual-friendly appearance.
+    </p>
+    
+    <!-- results (videos) -->
+   
+    <p class="title is-3 mt-5 has-text-centered"> Image-to-3D </p>
+    <video muted autoplay loop> <source src="videos/demo.mp4" type="video/mp4"> </video>
+
+    <p> </p>
+    <p class="title is-3 mt-5 has-text-centered"> Comparison </p>
+    <video muted autoplay loop> <source src="videos/comparison.mp4" type="video/mp4"> </video>
+    
+    <!-- citation -->
+  </div>
+
+
+  </section>
+</body>
+</html>
