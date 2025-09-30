@@ -58,15 +58,15 @@
     <p class="title is-3 mt-5 has-text-centered"> Abstract </p>
     <p class="content is-size-6 has-text-left">
       Single image-to-3D generation is pivotal for crafting controllable 3D assets. 
-      Given its under-constrained nature, we attempt to leverage 3D geometric priors from a novel view diffusion model and 2D appearance priors from an image generation model to guide the optimization process. 
-      We note that there is a disparity between the generation priors of these two diffusion models, leading to their different appearance outputs. 
+      Although recent inference-only methods have achieved impressive effects, their generation quality still lags behind that of image generation models. 
+      We attempt to leverage 3D geometric priors from the novel view diffusion model and 2D appearance priors from an image generation model to combine the geometric messages of the former and appearance priors of the latter. 
+      We note that there is a disparity between the generation priors of these two diffusion models, leading to different appearance outputs. 
       Specifically, image generation models tend to deliver more detailed visuals, whereas novel view models produce consistent yet over-smooth results across different views. 
-      Directly combining them leads to suboptimal effects due to their appearance conflicts. 
-      Hence, we propose a 2D-3D <b>hy</b>brid <b>F</b>ourier <b>S</b>core <b>D</b>istillation objective function, <b>hy-FSD</b>. 
-      It optimizes 3D Gaussians using 3D priors in spatial domain to ensure geometric consistency, while exploiting 2D priors in the frequency domain through Fourier transform for better visual quality. 
-      hy-FSD can be integrated into existing 3D generation methods and produce significant performance gains. 
-      With this technique, we further develop an image-to-3D generation pipeline to create high-quality 3D objects within one minute, named <b>Fourier123</b>. 
-      Extensive experiments demonstrate that Fourier123 excels in efficient generation with rapid convergence speed and visually-friendly generation results.
+      Directly combining them leads to suboptimal effects due to their appearance conflicts. Hence, we propose a 2D-3D hybrid Fourier score distillation objective function, called hy-FSD. 
+      It optimizes 3D Gaussians using 3D priors in the spatial domain to ensure geometric consistency, while exploiting 2D priors in the frequency domain through the Fourier transform for better visual quality. 
+      The proposed hy-FSD can be integrated into existing 3D generation methods and produce significant performance gains. 
+      With this technique, we have developed an image-to-3D generation pipeline to create high-quality 3D objects within one minute, named Fourier123. 
+      Extensive experiments demonstrate that Fourier123 excels at efficiently generating results with rapid convergence speed and a visually appealing output.
     </p>
     
     <!-- results (videos) -->
